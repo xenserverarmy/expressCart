@@ -83,7 +83,7 @@
         },
         "paymentGateway": {
             "type": "string",
-            "enum": ["paypal", "stripe", "authorizenet"]
+            "enum": ["paypal", "stripe", "authorizenet", ""]
         },
         "databaseConnectionString": {
             "type": "string"
@@ -102,6 +102,9 @@
             "default": false
         },
         "orderHook": {
+            "format": "uri-template"
+        },
+        "inventoryAPI": {
             "format": "uri-template"
         },
         "secretCookie": {

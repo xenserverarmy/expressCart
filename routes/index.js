@@ -14,7 +14,9 @@ const {
     getImages,
     updateTotalCartAmount,
     getData,
-    addSitemapProducts
+    addSitemapProducts,
+    stock,
+    deliveryDate
  } = require('../lib/common');
 
 // These is the customer facing routes
@@ -156,6 +158,10 @@ router.get('/product/:id', async (req, res) => {
         return;
     }
 
+    stockStatus = await stock(product._id);
+    shipDate = await deliveryDate (product._id);
+
+
     // show the view
     const images = await getImages(product._id, req, res);
 
@@ -174,6 +180,8 @@ router.get('/product/:id', async (req, res) => {
         messageType: clearSessionValue(req.session, 'messageType'),
         helpers: req.handlebars.helpers,
         showFooter: 'showFooter',
+	stockStatus: parseInt(stockStatus),
+	shipDate: shipDate,
         menu: sortMenu(await getMenu(db))
     });
 });

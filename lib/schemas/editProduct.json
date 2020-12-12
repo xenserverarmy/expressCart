@@ -31,7 +31,11 @@
         },
         "productStock": {
             "type": ["number", "null"]
+        },
+        "shipDate": {
+            "type": ["string"]
         }
+
     },
     "required": [
         "productId"

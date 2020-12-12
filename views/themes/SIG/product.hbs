@@ -49,6 +49,23 @@
                 </div>
                 {{/ifCond}}
             {{/if}}
+
+            <h4 class="col s12 m10 product-option">Quantity available to ship: {{stockStatus}}</h4>
+
+            <h4 class="col s12 m10 product-option">Expected ship date: {{shipDate}}</h4>
+
+<!--
+            {{#ifCond stockStatus '==' 0}}
+                <h4 class="col s12 m10 product-option" style="color:red;">Out of stock</h4>
+            {{else}}
+                {{#ifCond stockStatus '<' 3}}
+                    <h4 class="col s12 m10 product-option" style="color:amber;">Low stock</h4>
+                {{else}}
+                    <h4 class="col s12 m10 product-option">In stock</h4>
+                {{/ifCond}}
+             {{/ifCond}}
+-->
+
             <div class="col s10 productOptions">
                 <p class="product-option-text">Quantity</p>
                 <div class="input-group">
