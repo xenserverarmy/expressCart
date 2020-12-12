@@ -20,7 +20,7 @@
     "googleAnalytics": "",
     "customCss": ".footer{padding-top: 5px;}",
     "currencySymbol": "$",
-    "paymentGateway": "",
+    "paymentGateway": "authorizenet",
     "databaseConnectionString": "mongodb://user:Passw0rd!@expresscart-app.mongo.svc:27017/cart",
     "theme": "SIG",
     "trackStock": false,

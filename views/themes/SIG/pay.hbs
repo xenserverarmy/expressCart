@@ -29,7 +29,7 @@
                     </div>
                     {{/if}}
                     <form id="shipping-form" class="shipping-form" action="/{{config.paymentGateway}}/checkout_action" method="post" role="form" data-toggle="validator" novalidate="false">
-                        {{> themes/Material/shipping-form}}
+                        {{> themes/SIG/shipping-form}}
                         {{#if session.customer}}
                         {{#ifCond config.paymentGateway '==' 'paypal'}}
                             {{> payments/paypal}}
@@ -60,7 +60,7 @@
             </div>
         </div>
         <div id="cart" class="col-md-7 col m7 offset-m1">
-            {{> themes/Material/cart}}
+            {{> themes/SIG/cart}}
         </div>
     </div>
 </div>

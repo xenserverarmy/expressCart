@@ -27,8 +27,8 @@ router.post('/checkout_action', (req, res, next) => {
                 amount: req.session.totalCartAmount,
                 payment: {
                     opaqueData: {
-                        dataDescriptor: req.body.opaqueData.dataDescriptor,
-                        dataValue: req.body.opaqueData.dataValue
+                        dataDescriptor: "",
+                        dataValue: ""
                     }
                 }
             }
